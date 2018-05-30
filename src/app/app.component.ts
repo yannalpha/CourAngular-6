@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import set = Reflect.set;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'mon appli !';
+  isAuth = false;
+
+  appareilOne = 'ballon d\'eau chaude';
+  appareilTwo = 'machine à laver';
+  appareilThree = 'gazinière';
+
+  onAllumer() {
+    alert('bouton pas encore fonctionnel');
+  }
+  constructor() {
+    setTimeout(() => this.isAuth = true, 4000);
+  }
 }
